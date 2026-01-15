@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+    --primary-color: #5b7c99;  /* ana renk*/
+    --primary-hover: #4a657d; /* ana renk üstüne gelince*/
+    --secondary-color: #a8dadc; /*ikinci renk*/
+    --accent-color: #e63946; /* önemli yerler renk*/
+    --bg-color: #f8f9fa;  /* arKa plank*/
+    --card-bg: rgba(255, 255, 255, 0.85); /* kartların arka planı*/
+    --text-dark: #2d3436;  /* ana yazı */
+    --text-muted: #636e72;  /* daha soluk metinler */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);  /*gölge küçük*/
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+    --glass-blur: blur(12px);  /* arKa planı bulanıklaştır*/
+    --radius-md: 12px;  /* orta ve enarları yuvarla*/
+    --radius-lg: 20px;
+}
+body { /* tüm yazı  */
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-color); 
+    color: var(--text-dark);
+    line-height: 1.6; /* satır aarası boşluk */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
+}
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+.social-icons a {
+    color: var(--text-muted);
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+.carousel-item {
+    height: 600px;
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    filter: brightness(0.9);
+}
+.carousel-caption {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-md);
+    bottom: 20%;
+}
+.section-padding {
+    padding: 80px 0;
+}
+.card {
+    border: none; /* kenarlık yok */
+    border-radius: var(--radius-md);  /* köşeler yuvarlak */
+    background: var(--card-bg);/**/
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* anmasyon umuşak geçiş */
+    overflow: hidden; /* taşan içerik silinsin */
+}
+.card:hover {
+    transform: translateY(-5px); /*üstüne gelince yukarı çıksın */
+    box-shadow: var(--shadow-md);
+}
+.service-icon {
+    font-size: 3rem; /*yazı büyüklüğü */
+    color: var(--primary-color);
+    margin-bottom: 1.5rem; /*alt boşluk*/
+}
+footer {
+    background-color: #fff;
+    padding: 60px 0 30px; /*boşluk*/
+    border-top: 1px solid rgba(0,0,0,0.05); /*sayfayı ayırmak için ince çizgi*/
+}
+.footer-title { 
+    font-size: 1.2rem; 
+    margin-bottom: 1.5rem; 
+    color: var(--primary-color);
+}
+.footer-link {
+    display: block; /*linkler alt alta*/
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    text-decoration: none; /*alt çizgi kalksın */
+    transition: color 0.2s;
+}
+.footer-link:hover {
+    color: var(--primary-color);
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(91, 124, 153, 0.3);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(91, 124, 153, 0.4);
+}
+.text-primary-custom {
+    color: var(--primary-color);
+}
+.bg-soft {
+    background-color: #edf2f7;
+}
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+    .carousel-caption {
+        bottom: 10%;
+        padding: 1rem;
+    }
+}
